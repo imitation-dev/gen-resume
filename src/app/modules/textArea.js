@@ -36,12 +36,12 @@ export function registerTextAreaInput() {
       for (const obj of activeData) {
         if (obj instanceof Object) {
           path.reduce((pre, key, idx) => {
-            pre = pre[key]
-            if (isEqual(pre, obj)) {
+            const temp = pre[key]
+            if (isEqual(temp, obj)) {
               setSessionStorage('activeObjPath', path.slice(0, idx + 1))
               clickObjEditor.set(obj)
             }
-            return pre
+            return temp
           }, lastData)
           break
         }
@@ -50,7 +50,7 @@ export function registerTextAreaInput() {
   })
   $textarea.addEventListener(
     'input',
-    debounce(function () {
+    debounce(() => {
       if (!editor.activeResult?.node) {
         return
       }

@@ -6,12 +6,14 @@ export default function Icon(props) {
     html,
     handleClick,
   } = props
+
   return (
     <li
       className='icon-item'
       onClick={() => {
-        handleClick
-          && handleClick(name)
+        if (handleClick) {
+          handleClick(name)
+        }
       }}
     >
       <i
@@ -22,4 +24,10 @@ export default function Icon(props) {
       <div className='name'>{name}</div>
     </li>
   )
+}
+
+Icon.propTypes = {
+  name: String,
+  html: String,
+  handleClick: Function,
 }

@@ -50,9 +50,9 @@ export default function initNav(defaultPage = getActivePageKey() || 'react1') {
   $nav.append(t)
 
   // 默认页面
-  const _link = links.find((link) => link?.href?.endsWith(defaultPage))
-  changeIframePage(_link.href)
-  activeLink(_link)
+  const linkTemp = links.find((link) => link?.href?.endsWith(defaultPage))
+  changeIframePage(linkTemp.href)
+  activeLink(linkTemp)
 
   // 窄屏手动开/关导航栏
   document.getElementById('open-menu').addEventListener('click', () => {

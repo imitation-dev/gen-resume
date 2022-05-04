@@ -22,6 +22,7 @@ import { getTextArea } from './textArea'
 export function registerResetBtn() {
   // 重置
   document.getElementById('reset').addEventListener('click', () => {
+    // eslint-disable-next-line no-alert
     if (window.confirm('是否初始化数据，这将会覆盖原有数据')) {
       const key = getPageKey()
       const data = getDefaultSchema(key)

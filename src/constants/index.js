@@ -6,3 +6,5 @@ export const navTitle = {
   introduce: '使用文档',
   abc: '演示示例',
 }
+
+export default navTitle

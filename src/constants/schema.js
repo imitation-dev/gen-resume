@@ -4,5 +4,8 @@ import react1 from './schema/react1'
 import vue1 from './schema/vue1'
 
 export default {
-  abc, demo1, react1, vue1,
+  abc,
+  demo1,
+  react1,
+  vue1,
 }

@@ -5,7 +5,7 @@ export default function App() {
   const [schema, updateSchema] = useState(getSchema())
   const { name, position, infos = [] } = schema
   useEffect(() => {
-    window.refresh = function () {
+    window.refresh = () => {
       updateSchema(getSchema())
     }
   }, [])

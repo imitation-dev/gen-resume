@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { copyRes, getSchema } from '../../utils'
-import Icon from './components/Icon'
+import Icon from './components/Icon.jsx'
 
 import './index.css'
 

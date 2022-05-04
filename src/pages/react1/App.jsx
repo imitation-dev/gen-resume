@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { getSchema } from '../../utils'
-import BaseInfo from './components/BaseInfo'
-import Exps from './components/Exps'
-import OtherInfo from './components/OtherInfo'
+import BaseInfo from './components/BaseInfo.jsx'
+import Exps from './components/Exps.jsx'
+import OtherInfo from './components/OtherInfo.jsx'
 import './index.css'
 
 export default function App() {

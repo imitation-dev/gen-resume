@@ -15,32 +15,34 @@ export function createEmptySpan() {
 }
 
 export function getSchema(key = '') {
+  let keyTemp = key
   if (!key) {
-    key = getPathnameKey(window.location.pathname)
+    keyTemp = getPathnameKey(window.location.pathname)
   }
-  let data = localStorage.getItem(key)
+  let data = localStorage.getItem(keyTemp)
   if (!data) {
-    setSchema(getDefaultSchema(key), key)
+    setSchema(getDefaultSchema(keyTemp), keyTemp)
     return getSchema()
   }
   // 如果默认是空对象的则再取一次默认值
   if (data === '{}') {
-    setSchema(getDefaultSchema(key), key)
-    data = localStorage.getItem(key)
+    setSchema(getDefaultSchema(keyTemp), keyTemp)
+    data = localStorage.getItem(keyTemp)
   }
   return JSON.parse(data)
 }
 
 export function getDefaultSchema(key) {
-  const _key = key.slice(key.lastIndexOf('/') + 1)
-  return defaultSchema[_key] || {}
+  const keyTemp = key.slice(key.lastIndexOf('/') + 1)
+  return defaultSchema[keyTemp] || {}
 }
 
 export function setSchema(data, key = '') {
+  let keyTemp = key
   if (!key) {
-    key = getPathnameKey(window.location.pathname)
+    keyTemp = getPathnameKey(window.location.pathname)
   }
-  localStorage.setItem(key, JSON.stringify(data))
+  localStorage.setItem(keyTemp, JSON.stringify(data))
 }
 
 /**
@@ -48,11 +50,12 @@ export function setSchema(data, key = '') {
  */
 export function debounce(fn, delay) {
   let timer = null
-  return function (...rest) {
+  let fnTemp = fn
+  return (...rest) => {
     if (timer) {
       clearTimeout(timer)
     }
-    fn = fn.bind(this, ...rest)
+    fnTemp = fnTemp.bind(this, ...rest)
     timer = setTimeout(fn, delay)
   }
 }
@@ -111,14 +114,15 @@ export function traverseDomTreeMatchStr(dom, str, res = []) {
  * 高亮指定dom一段时间
  */
 export function highLightDom(dom, time = 500, color = '#fff566') {
-  if (!dom?.style) return
+  const temp = dom
+  if (!temp?.style) return
   if (time === 0) {
-    dom.style.backgroundColor = ''
+    temp.style.backgroundColor = ''
     return
   }
-  dom.style.backgroundColor = color
+  temp.style.backgroundColor = color
   setTimeout(() => {
-    dom.style.backgroundColor = ''
+    temp.style.backgroundColor = ''
   }, time)
 }
 
@@ -152,14 +156,14 @@ export function TransferAllImgToBase64(dom) {
       const image = new Image()
       image.src = `${$img.src}?v=${Math.random()}` // 处理缓存
       image.crossOrigin = '*' // 支持跨域图片
-      image.onload = function () {
+      image.onload = () => {
         i += 1
         $img.src = getBase64Image(image)
         if (i === $imgs.length) {
           res()
         }
       }
-      image.onerror = function () {
+      image.onerror = () => {
         i += 1
         if (i === $imgs.length) {
           res()

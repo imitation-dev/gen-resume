@@ -1,11 +1,16 @@
 import React from 'react'
 
 export default function BaseInfo(props) {
-    const { name, position } = props
-    return (
+  const { name, position } = props
+  return (
         <div className="base-info">
             <h1>{name}</h1>
             <h2>{position}</h2>
         </div>
-    )
+  )
+}
+
+BaseInfo.propTypes = {
+  name: String,
+  position: Number,
 }

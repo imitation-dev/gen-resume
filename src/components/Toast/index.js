@@ -51,6 +51,11 @@ class Toast {
   }
 }
 const toast = Toast.getInstance()
+
 export {
+  toast,
+}
+
+export default {
   toast,
 }

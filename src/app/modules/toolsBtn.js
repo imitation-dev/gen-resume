@@ -63,13 +63,13 @@ export function registerInputToolsBtn() {
       return
     }
     const lastData = data[data.length - 1]
-    const _index = data.findIndex((v) => v instanceof Array)
-    if (_index === -1) {
+    const indexTemp = data.findIndex((v) => v instanceof Array)
+    if (indexTemp === -1) {
       toast.error('此节点无法删除,请使用json更改')
       return
     }
-    const d1 = data[_index]
-    let key = data[_index - 1]
+    const d1 = data[indexTemp]
+    let key = data[indexTemp - 1]
     if (key instanceof Object) {
       key = d1.findIndex((v) => v === key)
     }
@@ -98,13 +98,13 @@ export function registerInputToolsBtn() {
       return
     }
     const lastData = data[data.length - 1]
-    const _index = data.findIndex((v) => v instanceof Array)
-    if (_index === -1) {
+    const indexTemp = data.findIndex((v) => v instanceof Array)
+    if (indexTemp === -1) {
       toast.error('此节点无法拷贝,请使用json更改')
       return
     }
-    const d1 = data[_index]
-    let key = data[_index - 1]
+    const d1 = data[indexTemp]
+    let key = data[indexTemp - 1]
     if (key instanceof Object) {
       key = d1.findIndex((v) => v === key)
     }
@@ -122,13 +122,13 @@ export function registerInputToolsBtn() {
       return
     }
     const lastData = data[data.length - 1]
-    const _index = data.findIndex((v) => v instanceof Array)
-    if (_index === -1) {
+    const indexTemp = data.findIndex((v) => v instanceof Array)
+    if (indexTemp === -1) {
       toast.error('此节点无法移动,请使用json更改')
       return
     }
-    const d1 = data[_index]
-    let key = data[_index - 1]
+    const d1 = data[indexTemp]
+    let key = data[indexTemp - 1]
     if (key instanceof Object) {
       key = d1.findIndex((v) => v === key)
     }
@@ -150,13 +150,13 @@ export function registerInputToolsBtn() {
       return
     }
     const lastData = data[data.length - 1]
-    const _index = data.findIndex((v) => v instanceof Array)
-    if (_index === -1) {
+    const indexTemp = data.findIndex((v) => v instanceof Array)
+    if (indexTemp === -1) {
       toast.error('此节点无法移动,请使用json更改')
       return
     }
-    const d1 = data[_index]
-    let key = data[_index - 1]
+    const d1 = data[indexTemp]
+    let key = data[indexTemp - 1]
     if (key instanceof Object) {
       key = d1.findIndex((v) => v === key)
     }

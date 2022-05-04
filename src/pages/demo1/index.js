@@ -18,7 +18,7 @@ function updateAvatar(value) {
   $avatar.querySelector('img').src = value
   const $img = new Image()
   $img.src = value
-  $img.onload = function () {
+  $img.onload = () => {
     const { width } = $avatar.querySelector('img').getBoundingClientRect()
     const containerWidth = 160
     if (width < containerWidth) {
@@ -114,7 +114,7 @@ function updateRightInfo(value) {
   }
 }
 
-window.refresh = function () {
+window.refresh = () => {
   const data = getSchema()
   const {
     name, position, avatar, left, right,
