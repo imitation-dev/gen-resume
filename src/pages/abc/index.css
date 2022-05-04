@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body,
+#resume {
+  height: 100%;
+  overflow: hidden;
+}
+
+#app {
+  padding: 1rem;
+}
+
+header h1 {
+  color: red;
+}
+
+header h2 {
+  font-weight: lighter;
+}
+
+.infos {
+  list-style: none;
+}
+
+.infos li {
+  color: red;
+}

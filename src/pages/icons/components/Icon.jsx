@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react'
 
 export default function Icon(props) {
   const {
     name,
     html,
     handleClick,
-  } = props;
+  } = props
   return (
     <li
       className='icon-item'
       onClick={() => {
-        handleClick &&
-          handleClick(name);
+        handleClick
+          && handleClick(name)
       }}
     >
       <i
@@ -21,5 +21,5 @@ export default function Icon(props) {
       />
       <div className='name'>{name}</div>
     </li>
-  );
+  )
 }

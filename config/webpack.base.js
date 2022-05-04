@@ -34,8 +34,8 @@ module.exports = {
     // 配置loader
     rules: [
       {
-        test: /\.(sc|c)ss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.(png|jpg|gif|jpeg)$/,

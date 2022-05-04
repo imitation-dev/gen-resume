@@ -1,5 +1,5 @@
 // import { getSchema } from "../../utils"
-// import './index.scss'
+// import './index.css'
 
 // window.refresh = function () {
 //     const schema = getSchema()
@@ -42,7 +42,7 @@
 
 import Vue from 'vue'
 import App from './App.vue'
-import './index.scss'
+import './index.css'
 
 Vue.config.productionTip = process.env.NODE_ENV === 'development'
 
@@ -53,7 +53,7 @@ new Vue({
 // import React from 'react'
 // import ReactDOM from 'react-dom';
 // import App from './App.jsx'
-// import './index.scss'
+// import './index.css'
 
 // ReactDOM.render(
 //     <React.StrictMode>
@@ -63,7 +63,7 @@ new Vue({
 // )
 
 // import { getSchema } from "../../utils"
-// import './index.scss'
+// import './index.css'
 
 // window.refresh = function () {
 //     const schema = getSchema()

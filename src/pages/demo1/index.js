@@ -1,4 +1,4 @@
-import './index.scss'
+import './index.css'
 import { createLink, getSchema } from '../../utils/index'
 
 function updateName(value) {

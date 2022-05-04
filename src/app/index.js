@@ -1,4 +1,4 @@
-import '../assets/css/app.scss'
+import '../assets/css/app.css'
 import html2canvas from 'html2canvas'
 
 import { toggleControlPanel } from './modules/public'

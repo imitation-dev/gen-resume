@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import './index.scss'
+import './index.css'
 
 Vue.config.productionTip = process.env.NODE_ENV === 'development'
 
